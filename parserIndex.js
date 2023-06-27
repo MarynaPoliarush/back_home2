@@ -11,7 +11,7 @@ async function getIndex (){
   
     try{
   
-        const browser = await puppeteer.launch({headless:'new', 'ignoreDefaultArgs': [ '--enable-automation'] })
+        const browser = await puppeteer.launch({headless:true, 'ignoreDefaultArgs': [ '--enable-automation'] })
         const newPage = await browser.newPage();
         await newPage.goto('https://tradingeconomics.com/stocks',{timeout: 0})
 
