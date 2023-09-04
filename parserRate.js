@@ -1,6 +1,6 @@
 console.log("hello rates");
 const puppeteer =  require('puppeteer-extra');
-var kill  = require('tree-kill');
+
 
 
 async function getRate (){
@@ -29,13 +29,6 @@ try{
     console.log(e)
 }
 
-process.on('exit', (code) => {
-    kill(child.pid, 'SIGTERM', function(err){
-      kill(child.pid, 'SIGKILL', function(err){
-        process.kill(-child.pid);
-      });
-    });
-  });
 
     return currencies
     
